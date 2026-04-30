@@ -6,7 +6,7 @@ function Items() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/items')
+    axios.get('https://cs-sbd-10-mirza-adi-raffiansyah-2ba.vercel.app/items')
       .then((response) => {
         setItems(response.data.data || response.data.payload || response.data);
         setLoading(false);

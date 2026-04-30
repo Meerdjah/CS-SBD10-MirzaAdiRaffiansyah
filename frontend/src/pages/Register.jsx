@@ -15,7 +15,7 @@ function Register() {
     setPesan('Loading...');
 
     try {
-      const response = await axios.post('http://localhost:3000/auth/register', {
+      const response = await axios.post('https://cs-sbd-10-mirza-adi-raffiansyah-2ba.vercel.app/auth/register', {
         name: name,
         username: username,
         email: email,

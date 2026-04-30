@@ -13,7 +13,7 @@ function Login() {
     setPesan('Loading...');
 
     try {
-      const response = await axios.post('http://localhost:3000/auth/login', {
+      const response = await axios.post('https://cs-sbd-10-mirza-adi-raffiansyah-2ba.vercel.app/auth/login', {
         email: email,
         password: password
       });
