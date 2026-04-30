@@ -8,10 +8,12 @@ const PORT = process.env.PORT || 3000;
 db.query('SELECT NOW()')
   .then(() => {
     console.log('Database connected successfully');
+    if (process.env.NODE_ENV !== 'production') {
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
       console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
     });
+    }
   })
   .catch((err) => {
     console.error('Database connection failed:', err);
